@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        .dm-sans {
+            font-family: 'DM Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="h-screen w-full dm-sans fixed overflow-hidden bg-cover bg-center bg-[#0B0C14] text-neutral-200" style="background: url('./assets/background.jpg') no-repeat;">
+    <header class="z-40 top-0 left-0 right-0 flex justify-center helvetica bg-[#0B0C14]/80 fixed before:absolute before:-z-10 before:inset-0 before:backdrop-blur-2xl">
+        <nav class="grow flex justify-between border-b mx-5 max-w-[1110px] h-[52px] text-[14px] leading-[100%] text-[#C9D3EE] border-[#727DA1]/15">
+            <div class="flex items-center space-x-4">
+                <h2 class="text-[#EAEAEA] font-bold">Shopify</h2>
+                <a href="index.html" class="hover:text-[#EAEAEA]">Home</a>
+                <a href="menu.html" class="hover:text-[#EAEAEA]">Shop</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="hover:text-[#EAEAEA]">Login</a>
+                <a href="cart.html" class="hover:text-[#EAEAEA]">Cart</a>
+            </div>
+        </nav>
+    </header>
+    <section class="flex items-center justify-center h-screen">
+        <div class="flex flex-col items-start justify-center space-y-3" id="signin-container">
+            <h2 class="text-[#EAEAEA] text-4xl font-bold text-center">Welcome Back</h2>
+            <p class="text-[#939DB8]">First time here? <a class="text-[#7C87F7] transition hover:text-brand-primary-90 focus-visible -m-1 p-1 cursor-pointer" id="sign-up-button">Sign up for free.</a></p>
+
+            <div class="flex flex-col space-y-1">
+                <label for="email" class="text-sm text-neutral-200">Email</label>
+                <input id="email" name="email" type="email" placeholder="Enter email or username" autocomplete="email" required class="bg-[#222630]/20 backdrop-blur-sm  px-4 py-2.5 outline-none w-[280px] text-white rounded-lg border-2 border-solid border-[#2B3040] transition-all duration-150 hover:ring-2 hover:ring-blue-500 hover:ring-offset-0 hover:shadow-[0_0_8px_2px_rgba(59,130,246,0.6)] focus:ring-2 focus:ring-[#596A95] focus:shadow-[0_0_10px_2px_rgba(89,106,149,0.7)]" />
+
+            </div>
+            <div class="flex flex-col space-y-1">
+                <label for="password" class="text-sm text-neutral-200">Password</label>
+                <input id="password" name="password" type="password" placeholder="Enter Password" autocomplete="email" required class="bg-[#222630]/20 backdrop-blur-sm px-4 py-2.5 outline-none w-[280px] text-white rounded-lg border-2 border-solid border-[#2B3040] transition-all duration-150 hover:ring-2 hover:ring-blue-500 hover:ring-offset-0 hover:shadow-[0_0_8px_2px_rgba(59,130,246,0.6)] focus:ring-2 focus:ring-[#596A95] focus:shadow-[0_0_10px_2px_rgba(89,106,149,0.7)]" />
+            </div>
+
+            <button class="bg-[#4449b9] text-neutral-200 px-4 py-2 rounded-lg inline-block w-full transition duration-150 hover:bg-opacity-55">Sign up</button>
+        </div>
+
+        <div class="flex flex-col items-start justify-center space-y-3 hidden" id="signup-container">
+            <h2 class="text-[#EAEAEA] text-4xl font-bold text-center">Sign up for free</h2>
+            <p class="text-[#939DB8]">Already have an account? <a class="text-[#7C87F7] transition hover:text-brand-primary-90 focus-visible -m-1 p-1 cursor-pointer" id="sign-in-button">Sign in.</a></p>
+
+            <div class="flex flex-col space-y-1">
+                <label for="email" class="text-sm text-neutral-200">Email</label>
+                <input id="email" name="email" type="email" placeholder="Enter email or username" autocomplete="email" required class="bg-[#222630]/20 backdrop-blur-sm  px-4 py-2.5 outline-none w-[280px] text-white rounded-lg border-2 border-solid border-[#2B3040] transition-all duration-150 hover:ring-2 hover:ring-blue-500 hover:ring-offset-0 hover:shadow-[0_0_8px_2px_rgba(59,130,246,0.6)] focus:ring-2 focus:ring-[#596A95] focus:shadow-[0_0_10px_2px_rgba(89,106,149,0.7)]" />
+
+            </div>
+            <div class="flex flex-col space-y-1">
+                <label for="password" class="text-sm text-neutral-200">Password</label>
+                <input id="password" name="password" type="password" placeholder="Enter Password" autocomplete="email" required class="bg-[#222630]/20 backdrop-blur-sm px-4 py-2.5 outline-none w-[280px] text-white rounded-lg border-2 border-solid border-[#2B3040] transition-all duration-150 hover:ring-2 hover:ring-blue-500 hover:ring-offset-0 hover:shadow-[0_0_8px_2px_rgba(59,130,246,0.6)] focus:ring-2 focus:ring-[#596A95] focus:shadow-[0_0_10px_2px_rgba(89,106,149,0.7)]" />
+            </div>
+
+            <button class="bg-[#4449b9] text-neutral-200 px-4 py-2 rounded-lg inline-block w-full transition duration-150 hover:bg-opacity-55">Sign up</button>
+        </div>
+    </section>
+    <footer class="absolute bottom-0 left-0 right-0 text-center text-[rgb(147,157,184)] text-xs p-4">
+        <p class="max-w-[300px] mx-auto">You acknowledge that you read, and agree to our <a href="#" class="transition text-white hover:text-neutral-100 focus-visible -m-1 p-1">Terms of Service</a> and our <a href="#" class="transition text-white hover:text-neutral-100 focus-visible -m-1 p-1">Privacy Policy</a></p>
+</body>
+
+<script>
+    document.getElementById('sign-in-button').addEventListener('click', function() {
+        document.getElementById('signup-container').classList.add('hidden');
+        document.getElementById('signin-container').classList.remove('hidden');
+    });
+
+    document.getElementById('sign-up-button').addEventListener('click', function() {
+        document.getElementById('signin-container').classList.add('hidden');
+        document.getElementById('signup-container').classList.remove('hidden');
+    });
+
+</script>
+</html>

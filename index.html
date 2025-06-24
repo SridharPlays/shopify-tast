@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        main::-webkit-scrollbar {
+            display: none;
+        }
+
+        .dm-sans {
+            font-family: 'DM Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0B0C14] text-neutral-200 h-screen w-full dm-sans overflow-x-hidden">
+    <header
+        class="z-40 top-0 left-0 right-0 flex justify-center helvetica bg-[#0B0C14]/80 fixed before:absolute before:-z-10 before:inset-0 before:backdrop-blur-2xl">
+        <nav
+            class="grow flex justify-between border-b mx-5 max-w-[1110px] h-[52px] text-[14px] leading-[100%] text-[#C9D3EE] border-[#727DA1]/15">
+            <div class="flex items-center space-x-4">
+                <h2 class="text-[#EAEAEA] font-bold">Shopify</h2>
+                <a href="#" class="hover:text-[#EAEAEA]">Home</a>
+                <a href="menu.html" class="hover:text-[#EAEAEA]">Shop</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="hover:text-[#EAEAEA]">Login</a>
+                <a href="cart.html" class="hover:text-[#EAEAEA]">Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="h-auto lg:h-screen overflow-y-scroll md:snap-y md:snap-mandatory">
+        <!-- Hero Section -->
+        <section
+            class="h-screen bg-cover bg-center text-white flex items-center justify-center px-6 md:snap-start"
+            style="background: url('./assets/herosection2.jpg') no-repeat; background-position: center; background-size: cover;">
+            <div class="max-w-2xl text-center space-y-6">
+                <h1 class="text-4xl md:text-7xl font-bold leading-tight">Discover Your Next <br /><span
+                        class="text-indigo-40w0">Favorite Product</span></h1>
+                <p class="text-lg text-neutral-300 max-w-sm mx-auto">Exclusive styles. Unbeatable prices. Elevate your
+                    lifestyle with every purchase.</p>
+
+                <div class="flex flex-col sm:flex-row items-center gap-4 justify-center">
+                    <a href="menu.html"
+                        class="bg-indigo-500 hover:bg-indigo-600 transition px-6 py-3 rounded-lg text-white font-medium w-full sm:w-auto">Start
+                        Shopping</a>
+                </div>
+
+                <div class="text-sm text-neutral-400">
+                    Start browsing for free
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="max-w-7xl mx-auto h-auto lg:h-screen flex flex-col justify-center py-10 px-4 md:snap-start">
+            <!-- Header -->
+            <div class="flex items-center justify-between text-center py-4">
+                <h2 class="text-white text-xl md:text-3xl font-bold leading-tight">Featured Products</h2>
+                <div class="flex items-center">
+                    <button id="prevBtn"
+                        class="mr-2 hidden lg:flex justify-center items-center rounded-full border transition w-[38px] h-[38px] border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330]">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </button>
+                    <button id="nextBtn"
+                        class="hidden lg:flex justify-center items-center rounded-full border transition w-[38px] h-[38px] border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330]">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </button>
+                    <a class="ml-4 block px-4 py-2 text-xs md:text-sm rounded-full border text-[#C9D3EE] border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] flex items-center"
+                        href="menu.html">
+                        Explore More
+                        <ion-icon name="chevron-forward-outline" class="ml-2"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div class="overflow-y-auto md:overflow-hidden relative">
+                <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Electronics -->
+        <section class="max-w-7xl mx-auto h-auto lg:h-screen flex flex-col justify-center py-10 px-4 md:snap-start">
+            <!-- Header -->
+            <div class="flex items-center justify-between text-center py-4">
+                <h2 class="text-white text-xl md:text-3xl font-bold leading-tight">Electronics Products</h2>
+                <div class="flex items-center">
+                    <button id="prevBtn2"
+                        class="mr-2 hidden lg:flex justify-center items-center rounded-full border transition w-[38px] h-[38px] border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330]">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </button>
+                    <button id="nextBtn2"
+                        class="hidden lg:flex justify-center items-center rounded-full border transition w-[38px] h-[38px] border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330]">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </button>
+                    <a class="ml-4 block px-4 py-2 text-xs md:text-sm rounded-full border text-[#C9D3EE] border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] flex items-center"
+                        href="menu.html">
+                        Explore More
+                        <ion-icon name="chevron-forward-outline" class="ml-2"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div class="overflow-y-auto md:overflow-hidden relative">
+                <div id="electronic-carousel" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Cards will be injected here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const products = [
+            {
+                name: "Air Max Runner",
+                description: "Men's Running Shoes · Lightweight and breathable",
+                price: 129.99,
+                image: "./assets/products/nike_shoe.jpg",
+                category: "clothing"
+            }, {
+                name: "Air Max 270",
+                description: "Men's Lifestyle Shoes · Stylish and comfortable",
+                price: 149.99,
+                image: "./assets/products/nike_shoe_red.jpg",
+                category: "clothing"
+            }, {
+                name: "Apple AirPods Pro",
+                description: "Wireless Earbuds · Active Noise Cancellation",
+                price: 249.99,
+                image: "./assets/products/airpods.jpg",
+                category: "electronics"
+            }, {
+                name: "Apple Earpods",
+                description: "Wired Earbuds · Classic design with great sound",
+                price: 19.99,
+                image: "./assets/products/earpods.jpg",
+                category: "electronics"
+            }, {
+                name: "Samsung Galaxy S21",
+                description: "Smartphone · 6.2-inch display, 128GB storage",
+                price: 799.99,
+                image: "./assets/products/samsung.jpg",
+                category: "electronics"
+            }, {
+                name: "Sony WH-1000XM4",
+                description: "Over-Ear Headphones · Industry-leading noise cancellation",
+                price: 349.99,
+                image: "./assets/products/sony_headphones.jpg",
+                category: "electronics"
+            }, {
+                name: "Dell XPS 13",
+                description: "Laptop · 13.4-inch display, Intel Core i7",
+                price: 1299.99,
+                image: "./assets/products/dell.jpg",
+                category: "electronics"
+            }, {
+                name: "Nike Air Force 1",
+                description: "Classic Sneakers · Timeless style and comfort",
+                price: 89.99,
+                image: "./assets/products/nike_sneaker.jpg",
+                category: "clothing"
+            }, {
+                name: "MacBook Pro 16",
+                description: "Laptop · 16-inch Retina display, M1 Pro chip",
+                price: 2399.99,
+                image: "./assets/products/macbook_pro.jpg",
+                category: "electronics"
+            }, {
+                name: "MacBook Air",
+                description: "Laptop · 13-inch Retina display, M1 chip",
+                price: 999.99,
+                image: "./assets/products/macbook.jpg",
+                category: "electronics"
+            }, {
+                name: "Apple iphone 14 Pro",
+                description: "Smartphone · 6.1-inch display, A16 Bionic chip",
+                price: 999.99,
+                image: "./assets/products/iphone.jpg",
+                category: "electronics"
+            }, {
+                name: "In Ear Monitors",
+                description: "High-Quality In-Ear Monitors · Perfect for musicians",
+                price: 199.99,
+                image: "./assets/products/iem.jpg",
+                category: "electronics"
+            }, {
+                name: "Apple Headphones",
+                description: "Premium Over-Ear Headphones · Exceptional sound quality",
+                price: 349.99,
+                image: "./assets/products/apple_headphones.jpg",
+                category: "electronics"
+            }, {
+                name: "Asus Zenbook 14",
+                description: "Laptop · 14-inch display, Intel Core i5",
+                price: 899.99,
+                image: "./assets/products/asus_zenbook.jpg",
+                category: "electronics"
+            }, {
+                name: "Nike Sport Black",
+                description: "Stylish Sports Shoes · Lightweight and comfortable",
+                price: 79.99,
+                image: "./assets/products/nike_sports_black.jpg",
+                category: "clothing"
+            }
+        ];
+
+        const carousel = document.getElementById("carousel");
+        let currentIndex = 0;
+        let electronicCurrentIndex = 0;
+
+        // Generate cards
+        products.forEach(product => {
+            const card = document.createElement("div");
+            card.className = "min-w-[300px] max-w-xs mr-4 bg-[#0F101A] rounded-2xl border border-[#2C2F40] shadow-lg hover:scale-[1.02] transition-transform duration-300";
+            card.innerHTML = `
+        <div class="relative overflow-hidden rounded-t-2xl">
+          <img src="${product.image}" alt="${product.name}" loading='lazy' class="w-full h-64 object-cover" />
+          <span class="absolute top-3 left-3 bg-indigo-500 text-xs font-medium px-3 py-1 rounded-full">New</span>
+        </div>
+        <div class="p-5 space-y-3">
+          <h3 class="text-xl font-semibold">${product.name}</h3>
+          <p class="text-sm text-neutral-400">${product.description}</p>
+          <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-white">$${product.price.toFixed(2)}</span>
+          </div>
+        </div>
+      `;
+            carousel.appendChild(card);
+
+            if (product.category === "electronics") {
+                const clonedCard = card.cloneNode(true);
+                document.getElementById("electronic-carousel").appendChild(clonedCard);
+            }
+
+        });
+
+        const prevBtn = document.getElementById("prevBtn");
+        const prevBtn2 = document.getElementById("prevBtn2");
+        const nextBtn = document.getElementById("nextBtn");
+        const nextBtn2 = document.getElementById("nextBtn2");
+
+        function updateCarousel() {
+            const offset = -currentIndex * 320;
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
+
+        prevBtn.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextBtn.addEventListener("click", () => {
+            if (currentIndex < carousel.children.length - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+
+        prevBtn2.addEventListener("click", () => {
+            if (electronicCurrentIndex > 0) {
+                electronicCurrentIndex--;
+                updateCarousel2();
+            }
+        });
+
+        nextBtn2.addEventListener("click", () => {
+            if (electronicCurrentIndex < products.length - 1) {
+                electronicCurrentIndex++;
+                updateCarousel2();
+            }
+        });
+
+        function updateCarousel2() {
+            const offset = -electronicCurrentIndex * 320;
+            document.getElementById("electronic-carousel").style.transform = `translateX(${offset}px)`;
+        }
+
+        updateCarousel(); // Initialize position
+        updateCarousel2(); // Initialize position
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
