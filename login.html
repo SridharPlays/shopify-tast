@@ -71,11 +71,13 @@
     document.getElementById('sign-in-button').addEventListener('click', function() {
         document.getElementById('signup-container').classList.add('hidden');
         document.getElementById('signin-container').classList.remove('hidden');
+        document.title = "Login Page";
     });
 
     document.getElementById('sign-up-button').addEventListener('click', function() {
         document.getElementById('signin-container').classList.add('hidden');
         document.getElementById('signup-container').classList.remove('hidden');
+        document.title = "Sign Up Page";
     });
 
 </script>

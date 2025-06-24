@@ -2,203 +2,203 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shopify</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
-  <style>
-    .dm-sans {
-      font-family: 'DM Sans', sans-serif;
-    }
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Shopify</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+	<style>
+		.dm-sans {
+			font-family: 'DM Sans', sans-serif;
+		}
 
-    @keyframes slide-in {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
+		@keyframes slide-in {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
 
-    @keyframes slide-out {
-      from {
-        opacity: 1;
-        transform: translateY(0);
-      }
+		@keyframes slide-out {
+			from {
+				opacity: 1;
+				transform: translateY(0);
+			}
 
-      to {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-    }
+			to {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+		}
 
-    .animate-slide-in {
-      animation: slide-in 0.3s ease-out forwards;
-    }
+		.animate-slide-in {
+			animation: slide-in 0.3s ease-out forwards;
+		}
 
-    .animate-slide-out {
-      animation: slide-out 0.3s ease-in forwards;
-    }
-  </style>
+		.animate-slide-out {
+			animation: slide-out 0.3s ease-in forwards;
+		}
+	</style>
 
 </head>
 
 <body class="bg-[#0B0C14] text-white min-h-screen dm-sans">
 
-  <!-- Header -->
-  <header
-    class="z-40 top-0 left-0 right-0 flex justify-center bg-[#0B0C14]/80 fixed before:absolute before:-z-10 before:inset-0 before:backdrop-blur-2xl">
-    <nav
-      class="grow flex justify-between border-b mx-5 max-w-[1110px] h-[52px] text-[14px] leading-[100%] text-[#C9D3EE] border-[#727DA1]/15">
-      <div class="flex items-center space-x-4">
-        <h2 class="text-[#EAEAEA] font-bold">Shopify</h2>
-        <a href="index.html" class="hover:text-[#EAEAEA]">Home</a>
-        <a href="menu.html" class="hover:text-[#EAEAEA]">Shop</a>
-      </div>
-      <div class="flex items-center space-x-4">
-        <button onclick="toggleCart()" class="hover:text-[#EAEAEA]">🛒 Cart</button>
-        <!-- Go to Cart Page button -->
-        <a href="cart.html"
-          class="flex justify-center items-center rounded-full border transition w-full h-[42px] border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] text-sm text-[#C9D3EE]">
-          Go to Cart Page
-          <ion-icon name="chevron-forward-outline" class="ml-2 text-base"></ion-icon>
-        </a>
+	<!-- Header -->
+	<header
+		class="z-40 top-0 left-0 right-0 flex justify-center bg-[#0B0C14]/80 fixed before:absolute before:-z-10 before:inset-0 before:backdrop-blur-2xl">
+		<nav
+			class="grow flex justify-between border-b mx-5 max-w-[1110px] h-[52px] text-[14px] leading-[100%] text-[#C9D3EE] border-[#727DA1]/15">
+			<div class="flex items-center space-x-4">
+				<h2 class="text-[#EAEAEA] font-bold">Shopify</h2>
+				<a href="index.html" class="hover:text-[#EAEAEA]">Home</a>
+				<a href="menu.html" class="hover:text-[#EAEAEA]">Shop</a>
+			</div>
+			<div class="flex items-center space-x-4">
+				<button onclick="toggleCart()" class="hover:text-[#EAEAEA]">🛒 Cart</button>
+				<!-- Go to Cart Page button -->
+				<a href="cart.html"
+					class="flex justify-center items-center rounded-full border transition w-full h-[42px] border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] text-sm text-[#C9D3EE]">
+					Go to Cart Page
+					<ion-icon name="chevron-forward-outline" class="ml-2 text-base"></ion-icon>
+				</a>
 
-      </div>
-    </nav>
-  </header>
+			</div>
+		</nav>
+	</header>
 
-  <!-- Sidebar Cart -->
-  <aside id="cartSidebar"
-    class="fixed top-0 right-0 h-full w-80 bg-[#171926] p-6 transform translate-x-full transition-transform duration-300 z-50">
-    <h2 class="text-xl font-bold mb-4">Your Cart</h2>
-    <ul id="cartItems" class="space-y-4 text-sm"></ul>
-    <div class="mt-4 font-semibold">Total: $<span id="cartTotal">0.00</span></div>
-    <button onclick="toggleCart()"
-      class="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-lg">Close Cart</button>
-  </aside>
+	<!-- Sidebar Cart -->
+	<aside id="cartSidebar"
+		class="fixed top-0 right-0 h-full w-80 bg-[#171926] p-6 transform translate-x-full transition-transform duration-300 z-50">
+		<h2 class="text-xl font-bold mb-4">Your Cart</h2>
+		<ul id="cartItems" class="space-y-4 text-sm"></ul>
+		<div class="mt-4 font-semibold">Total: $<span id="cartTotal">0.00</span></div>
+		<button onclick="toggleCart()"
+			class="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-lg">Close Cart</button>
+	</aside>
 
-  <!-- Mobile Filters (visible only on small screens) -->
-  <div class="md:hidden px-6 pt-20 space-y-3">
-    <h3 class="text-lg font-semibold mb-2">Filters</h3>
-    <div class="grid grid-cols-2 gap-3">
-      <button onclick="sortBy('asc')"
-        class="flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-3 py-2 rounded-lg text-xs text-[#C9D3EE] transition">
-        Low to High
-        <ion-icon name="trending-up-outline" class="text-base"></ion-icon>
-      </button>
+	<!-- Mobile Filters (visible only on small screens) -->
+	<div class="md:hidden px-6 pt-20 space-y-3">
+		<h3 class="text-lg font-semibold mb-2">Filters</h3>
+		<div class="grid grid-cols-2 gap-3">
+			<button onclick="sortBy('asc')"
+				class="flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-3 py-2 rounded-lg text-xs text-[#C9D3EE] transition">
+				Low to High
+				<ion-icon name="trending-up-outline" class="text-base"></ion-icon>
+			</button>
 
-      <button onclick="sortBy('desc')"
-        class="flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-3 py-2 rounded-lg text-xs text-[#C9D3EE] transition">
-        High to Low
-        <ion-icon name="trending-down-outline" class="text-base"></ion-icon>
-      </button>
+			<button onclick="sortBy('desc')"
+				class="flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-3 py-2 rounded-lg text-xs text-[#C9D3EE] transition">
+				High to Low
+				<ion-icon name="trending-down-outline" class="text-base"></ion-icon>
+			</button>
 
-      <button onclick="filterCategory('electronics')"
-        class="flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-3 py-2 rounded-lg text-xs text-[#C9D3EE] transition col-span-1">
-        Electronics
-        <ion-icon name="laptop-outline" class="text-base"></ion-icon>
-      </button>
+			<button onclick="filterCategory('electronics')"
+				class="flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-3 py-2 rounded-lg text-xs text-[#C9D3EE] transition col-span-1">
+				Electronics
+				<ion-icon name="laptop-outline" class="text-base"></ion-icon>
+			</button>
 
-      <button onclick="filterCategory('clothing')"
-        class="flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-3 py-2 rounded-lg text-xs text-[#C9D3EE] transition col-span-1">
-        Clothing
-        <ion-icon name="shirt-outline" class="text-base"></ion-icon>
-      </button>
+			<button onclick="filterCategory('clothing')"
+				class="flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-3 py-2 rounded-lg text-xs text-[#C9D3EE] transition col-span-1">
+				Clothing
+				<ion-icon name="shirt-outline" class="text-base"></ion-icon>
+			</button>
 
-      <button onclick="resetFilters()"
-        class="col-span-2 flex items-center justify-between border border-[#939DB8]/20 bg-[#2C2F40] hover:bg-[#333846] px-3 py-2 rounded-lg text-xs text-[#C9D3EE] transition">
-        Reset Filters
-        <ion-icon name="refresh-outline" class="text-base"></ion-icon>
-      </button>
-    </div>
-  </div>
+			<button onclick="resetFilters()"
+				class="col-span-2 flex items-center justify-between border border-[#939DB8]/20 bg-[#2C2F40] hover:bg-[#333846] px-3 py-2 rounded-lg text-xs text-[#C9D3EE] transition">
+				Reset Filters
+				<ion-icon name="refresh-outline" class="text-base"></ion-icon>
+			</button>
+		</div>
+	</div>
 
-  <!-- Layout -->
-  <main class="pt-24 px-6 flex gap-6 max-w-7xl mx-auto">
+	<!-- Layout -->
+	<main class="pt-24 px-6 flex gap-6 max-w-7xl mx-auto">
 
-    <!-- Sidebar Filters -->
-    <aside class="w-64 hidden md:block">
-      <h3 class="text-xl font-semibold mb-4">Filters</h3>
-      <div class="space-y-4">
-        <button onclick="sortBy('asc')"
-          class="w-full flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-4 py-2 rounded-lg text-sm text-[#C9D3EE] transition">
-          Price Low to High
-          <ion-icon name="trending-up-outline" class="text-base"></ion-icon>
-        </button>
+		<!-- Sidebar Filters -->
+		<aside class="w-64 hidden md:block">
+			<h3 class="text-xl font-semibold mb-4">Filters</h3>
+			<div class="space-y-4">
+				<button onclick="sortBy('asc')"
+					class="w-full flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-4 py-2 rounded-lg text-sm text-[#C9D3EE] transition">
+					Price Low to High
+					<ion-icon name="trending-up-outline" class="text-base"></ion-icon>
+				</button>
 
-        <button onclick="sortBy('desc')"
-          class="w-full flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-4 py-2 rounded-lg text-sm text-[#C9D3EE] transition">
-          Price High to Low
-          <ion-icon name="trending-down-outline" class="text-base"></ion-icon>
-        </button>
+				<button onclick="sortBy('desc')"
+					class="w-full flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-4 py-2 rounded-lg text-sm text-[#C9D3EE] transition">
+					Price High to Low
+					<ion-icon name="trending-down-outline" class="text-base"></ion-icon>
+				</button>
 
-        <button onclick="filterCategory('electronics')"
-          class="w-full flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-4 py-2 rounded-lg text-sm text-[#C9D3EE] transition">
-          Electronics
-          <ion-icon name="laptop-outline" class="text-base"></ion-icon>
-        </button>
+				<button onclick="filterCategory('electronics')"
+					class="w-full flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-4 py-2 rounded-lg text-sm text-[#C9D3EE] transition">
+					Electronics
+					<ion-icon name="laptop-outline" class="text-base"></ion-icon>
+				</button>
 
-        <button onclick="filterCategory('clothing')"
-          class="w-full flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-4 py-2 rounded-lg text-sm text-[#C9D3EE] transition">
-          Clothing
-          <ion-icon name="shirt-outline" class="text-base"></ion-icon>
-        </button>
+				<button onclick="filterCategory('clothing')"
+					class="w-full flex items-center justify-between border border-[#939DB8]/20 bg-[#171926] hover:bg-[#222330] px-4 py-2 rounded-lg text-sm text-[#C9D3EE] transition">
+					Clothing
+					<ion-icon name="shirt-outline" class="text-base"></ion-icon>
+				</button>
 
-        <button onclick="resetFilters()"
-          class="w-full flex items-center justify-between border border-[#939DB8]/20 bg-[#2C2F40] hover:bg-[#333846] px-4 py-2 rounded-lg text-sm text-[#C9D3EE] transition">
-          Reset
-          <ion-icon name="refresh-outline" class="text-base"></ion-icon>
-        </button>
+				<button onclick="resetFilters()"
+					class="w-full flex items-center justify-between border border-[#939DB8]/20 bg-[#2C2F40] hover:bg-[#333846] px-4 py-2 rounded-lg text-sm text-[#C9D3EE] transition">
+					Reset
+					<ion-icon name="refresh-outline" class="text-base"></ion-icon>
+				</button>
 
-      </div>
-    </aside>
+			</div>
+		</aside>
 
-    <!-- Product Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 flex-1" id="product-container"></div>
+		<!-- Product Grid -->
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 flex-1" id="product-container"></div>
 
-  </main>
-  <div id="toast-container" class="fixed top-6 right-6 space-y-2 z-50"></div>
+	</main>
+	<div id="toast-container" class="fixed top-6 right-6 space-y-2 z-50"></div>
 
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script>
-    const products = [
-      { name: "Air Max Runner", description: "Men's Running Shoes · Lightweight and breathable", price: 129.99, image: "./assets/products/nike_shoe.jpg", category: "clothing" },
-      { name: "Air Max 270", description: "Men's Lifestyle Shoes · Stylish and comfortable", price: 149.99, image: "./assets/products/nike_shoe_red.jpg", category: "clothing" },
-      { name: "Apple AirPods Pro", description: "Wireless Earbuds · Active Noise Cancellation", price: 249.99, image: "./assets/products/airpods.jpg", category: "electronics" },
-      { name: "Apple Earpods", description: "Wired Earbuds · Classic design with great sound", price: 19.99, image: "./assets/products/earpods.jpg", category: "electronics" },
-      { name: "Samsung Galaxy S21", description: "Smartphone · 6.2-inch display, 128GB storage", price: 799.99, image: "./assets/products/samsung.jpg", category: "electronics" },
-      { name: "Sony WH-1000XM4", description: "Over-Ear Headphones · Industry-leading noise cancellation", price: 349.99, image: "./assets/products/sony_headphones.jpg", category: "electronics" },
-      { name: "Dell XPS 13", description: "Laptop · 13.4-inch display, Intel Core i7", price: 1299.99, image: "./assets/products/dell.jpg", category: "electronics" },
-      { name: "Nike Air Force 1", description: "Classic Sneakers · Timeless style and comfort", price: 89.99, image: "./assets/products/nike_sneaker.jpg", category: "clothing" },
-      { name: "MacBook Pro 16", description: "Laptop · 16-inch Retina display, M1 Pro chip", price: 2399.99, image: "./assets/products/macbook_pro.jpg", category: "electronics" },
-      { name: "MacBook Air", description: "Laptop · 13-inch Retina display, M1 chip", price: 999.99, image: "./assets/products/macbook.jpg", category: "electronics" },
-      { name: "Apple iphone 14 Pro", description: "Smartphone · 6.1-inch display, A16 Bionic chip", price: 999.99, image: "./assets/products/iphone.jpg", category: "electronics" },
-      { name: "In Ear Monitors", description: "High-Quality In-Ear Monitors · Perfect for musicians", price: 199.99, image: "./assets/products/iem.jpg", category: "electronics" },
-      { name: "Apple Headphones", description: "Premium Over-Ear Headphones · Exceptional sound quality", price: 349.99, image: "./assets/products/apple_headphones.jpg", category: "electronics" },
-      { name: "Asus Zenbook 14", description: "Laptop · 14-inch display, Intel Core i5", price: 899.99, image: "./assets/products/asus_zenbook.jpg", category: "electronics" },
-      { name: "Nike Sport Black", description: "Stylish Sports Shoes · Lightweight and comfortable", price: 79.99, image: "./assets/products/nike_sports_black.jpg", category: "clothing" }
-    ];
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script>
+		const products = [
+			{ name: "Air Max Runner", description: "Men's Running Shoes · Lightweight and breathable", price: 129.99, image: "./assets/products/nike_shoe.jpg", category: "clothing" },
+			{ name: "Air Max 270", description: "Men's Lifestyle Shoes · Stylish and comfortable", price: 149.99, image: "./assets/products/nike_shoe_red.jpg", category: "clothing" },
+			{ name: "Apple AirPods Pro", description: "Wireless Earbuds · Active Noise Cancellation", price: 249.99, image: "./assets/products/airpods.jpg", category: "electronics" },
+			{ name: "Apple Earpods", description: "Wired Earbuds · Classic design with great sound", price: 19.99, image: "./assets/products/earpods.jpg", category: "electronics" },
+			{ name: "Samsung Galaxy S21", description: "Smartphone · 6.2-inch display, 128GB storage", price: 799.99, image: "./assets/products/samsung.jpg", category: "electronics" },
+			{ name: "Sony WH-1000XM4", description: "Over-Ear Headphones · Industry-leading noise cancellation", price: 349.99, image: "./assets/products/sony_headphones.jpg", category: "electronics" },
+			{ name: "Dell XPS 13", description: "Laptop · 13.4-inch display, Intel Core i7", price: 1299.99, image: "./assets/products/dell.jpg", category: "electronics" },
+			{ name: "Nike Air Force 1", description: "Classic Sneakers · Timeless style and comfort", price: 89.99, image: "./assets/products/nike_sneaker.jpg", category: "clothing" },
+			{ name: "MacBook Pro 16", description: "Laptop · 16-inch Retina display, M1 Pro chip", price: 2399.99, image: "./assets/products/macbook_pro.jpg", category: "electronics" },
+			{ name: "MacBook Air", description: "Laptop · 13-inch Retina display, M1 chip", price: 999.99, image: "./assets/products/macbook.jpg", category: "electronics" },
+			{ name: "Apple iphone 14 Pro", description: "Smartphone · 6.1-inch display, A16 Bionic chip", price: 999.99, image: "./assets/products/iphone.jpg", category: "electronics" },
+			{ name: "In Ear Monitors", description: "High-Quality In-Ear Monitors · Perfect for musicians", price: 199.99, image: "./assets/products/iem.jpg", category: "electronics" },
+			{ name: "Apple Headphones", description: "Premium Over-Ear Headphones · Exceptional sound quality", price: 349.99, image: "./assets/products/apple_headphones.jpg", category: "electronics" },
+			{ name: "Asus Zenbook 14", description: "Laptop · 14-inch display, Intel Core i5", price: 899.99, image: "./assets/products/asus_zenbook.jpg", category: "electronics" },
+			{ name: "Nike Sport Black", description: "Stylish Sports Shoes · Lightweight and comfortable", price: 79.99, image: "./assets/products/nike_sports_black.jpg", category: "clothing" }
+		];
 
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let currentProducts = [...products];
+		let cart = JSON.parse(localStorage.getItem("cart")) || [];
+		let currentProducts = [...products];
 
-    const container = document.getElementById("product-container");
-    const cartItemsContainer = document.getElementById("cartItems");
-    const cartTotalEl = document.getElementById("cartTotal");
+		const container = document.getElementById("product-container");
+		const cartItemsContainer = document.getElementById("cartItems");
+		const cartTotalEl = document.getElementById("cartTotal");
 
-    function renderProducts(list = currentProducts) {
-      container.innerHTML = "";
-      list.forEach((product, index) => {
-        const card = document.createElement("div");
-        card.className = "bg-[#0F101A] rounded-2xl border border-[#2C2F40] shadow hover:scale-[1.02] transition";
-        card.innerHTML = `
+		function renderProducts(list = currentProducts) {
+			container.innerHTML = "";
+			list.forEach((product, index) => {
+				const card = document.createElement("div");
+				card.className = "bg-[#0F101A] rounded-2xl border border-[#2C2F40] shadow hover:scale-[1.02] transition";
+				card.innerHTML = `
           <div class="relative">
             <img src="${product.image}" alt="${product.name}" loading="lazy" class="w-full h-64 object-cover rounded-t-2xl" />
             <span class="absolute top-3 left-3 bg-indigo-500 text-xs font-medium px-3 py-1 rounded-full">New</span>
@@ -212,32 +212,32 @@
             </div>
           </div>
         `;
-        container.appendChild(card);
-      });
-    }
+				container.appendChild(card);
+			});
+		}
 
-    function addToCart(index) {
-      const product = currentProducts[index];
-      const existingIndex = cart.findIndex(p => p.name === product.name);
+		function addToCart(index) {
+			const product = currentProducts[index];
+			const existingIndex = cart.findIndex(p => p.name === product.name);
 
-      if (existingIndex !== -1) {
-        cart[existingIndex].quantity += 1;
-      } else {
-        cart.push({ ...product, quantity: 1 });
-      }
+			if (existingIndex !== -1) {
+				cart[existingIndex].quantity += 1;
+			} else {
+				cart.push({ ...product, quantity: 1 });
+			}
 
-      localStorage.setItem("cart", JSON.stringify(cart));
-      renderCart();
-      showToast("Item added to cart!", "success");
+			localStorage.setItem("cart", JSON.stringify(cart));
+			renderCart();
+			showToast("Item added to cart!", "success");
 
-    }
+		}
 
-    function renderCart() {
-      cartItemsContainer.innerHTML = "";
-      let total = 0;
-      cart.forEach((item, i) => {
-        const li = document.createElement("li");
-        li.innerHTML = `
+		function renderCart() {
+			cartItemsContainer.innerHTML = "";
+			let total = 0;
+			cart.forEach((item, i) => {
+				const li = document.createElement("li");
+				li.innerHTML = `
           <div class="flex justify-between items-center">
             <div>
               <div class="font-medium">${item.name}</div>
@@ -246,56 +246,56 @@
             <div>$${(item.price * item.quantity).toFixed(2)}</div>
           </div>
         `;
-        total += item.price * item.quantity;
-        cartItemsContainer.appendChild(li);
-      });
-      cartTotalEl.innerText = total.toFixed(2);
-    }
+				total += item.price * item.quantity;
+				cartItemsContainer.appendChild(li);
+			});
+			cartTotalEl.innerText = total.toFixed(2);
+		}
 
-    function toggleCart() {
-      document.getElementById("cartSidebar").classList.toggle("translate-x-full");
-    }
+		function toggleCart() {
+			document.getElementById("cartSidebar").classList.toggle("translate-x-full");
+		}
 
-    function sortBy(type) {
-      currentProducts.sort((a, b) => type === 'asc' ? a.price - b.price : b.price - a.price);
-      renderProducts();
-    }
+		function sortBy(type) {
+			currentProducts.sort((a, b) => type === 'asc' ? a.price - b.price : b.price - a.price);
+			renderProducts();
+		}
 
-    function filterCategory(cat) {
-      currentProducts = products.filter(p => p.category === cat);
-      renderProducts();
-    }
+		function filterCategory(cat) {
+			currentProducts = products.filter(p => p.category === cat);
+			renderProducts();
+		}
 
-    function resetFilters() {
-      currentProducts = [...products];
-      renderProducts();
-    }
+		function resetFilters() {
+			currentProducts = [...products];
+			renderProducts();
+		}
 
-    function showToast(message, type = "success") {
-      const toast = document.createElement("div");
-      toast.className = `
-    flex items-center px-4 py-3 min-w-[200px] max-w-sm text-sm rounded-lg shadow-lg
-    ${type === "success" ? "bg-green-600" : "bg-red-600"} 
-    text-white animate-slide-in
-  `;
-      toast.innerHTML = `
-    <ion-icon name="${type === "success" ? "checkmark-circle-outline" : "alert-circle-outline"}" class="mr-2 text-xl"></ion-icon>
-    <span>${message}</span>
-  `;
+		function showToast(message, type = "success") {
+			const toast = document.createElement("div");
+			toast.className = `
+				flex items-center px-4 py-3 min-w-[200px] max-w-sm text-sm rounded-lg shadow-lg
+				${type === "success" ? "bg-green-600" : "bg-red-600"} 
+				text-white animate-slide-in
+			`;
+						toast.innerHTML = `
+				<ion-icon name="${type === "success" ? "checkmark-circle-outline" : "alert-circle-outline"}" class="mr-2 text-xl"></ion-icon>
+				<span>${message}</span>
+			`;
 
-      const container = document.getElementById("toast-container");
-      container.appendChild(toast);
+			const container = document.getElementById("toast-container");
+			container.appendChild(toast);
 
-      setTimeout(() => {
-        toast.classList.add("animate-slide-out");
-        toast.addEventListener("animationend", () => toast.remove());
-      }, 3000);
-    }
-
-
-    renderProducts();
-    renderCart();
-  </script>
+			setTimeout(() => {
+				toast.classList.add("animate-slide-out");
+				toast.addEventListener("animationend", () => toast.remove());
+			}, 3000);
+		}
+		document.addEventListener("DOMContentLoaded", () => {
+			renderProducts();
+			renderCart();
+		});
+	</script>
 </body>
 
 </html>
